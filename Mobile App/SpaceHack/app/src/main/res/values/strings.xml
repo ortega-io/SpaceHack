@@ -1,0 +1,22 @@
+<resources>
+
+    <string name="app_name">SpaceHack</string>
+
+
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="title_discovered_devices">Discovered Devices</string>
+    <string name="label_connecting">Connecting</string>
+
+    <color name="base_background">#01112a</color>
+    <color name="title_border">#7a8285</color>
+    <color name="white">#ffffff</color>
+    <color name="red">#ff0000</color>
+    <color name="green">#00ff00</color>
+    <color name="alpha_white">#20ffffff</color>
+
+    <string name="title_activity_connecting">Connecting</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+
+</resources>

@@ -1,0 +1,246 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
+                android:background="@color/base_background"
+                android:orientation="vertical"
+                tools:context=".Dashboard">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/title_panel">
+
+        <TextView
+            android:text="@string/app_name"
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:paddingLeft="8dp"/>
+
+        <LinearLayout
+            android:background="@drawable/simple_panel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center">
+
+            <TextView
+                android:text="Status:"
+                android:id="@+id/status_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:textSize="15dp"/>
+
+
+            <TextView
+                android:text="DISCONNECTED"
+                android:id="@+id/connection_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:textSize="15dp"
+                android:paddingLeft="10dp"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+    
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.4"
+            android:paddingRight="20dp"
+            android:paddingTop="20dp">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/button_connect"
+                    android:text="CONNECT"
+                    android:background="@drawable/panel_button"
+                    android:textColor="@color/white"
+                    android:onClick="listPairedDevices"
+                    android:textSize="15dp"/>
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:id="@+id/button_scan_devices"
+                    android:text="SCAN DEVICES"
+                    android:onClick="scanForDevices"
+                    android:background="@drawable/panel_button"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    android:layout_marginTop="10dp"/>
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginTop="15dp"
+                        android:orientation="vertical"
+                        android:id="@+id/leftInputMethods"
+                        android:focusableInTouchMode="false">
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5"
+                            android:layout_margin="-2dp">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                >
+
+                                <Button
+                                    android:layout_width="0dp"
+                                    android:layout_height="fill_parent"
+                                    android:text="LC"
+                                    android:background="@drawable/flat_button"
+                                    android:layout_weight="0.5"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    android:id="@+id/button_left_click"/>
+
+                                <Button
+                                    android:layout_width="0dp"
+                                    android:layout_height="fill_parent"
+                                    android:text="RC"
+                                    android:background="@drawable/flat_button"
+                                    android:layout_weight="0.5"
+                                    android:textColor="@color/white"
+                                    android:textSize="20dp"
+                                    android:id="@+id/button_right_click"/>
+
+                                </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="0.5">
+
+                            <Button
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:text="Keyboard"
+                                android:background="@drawable/flat_button"
+                                android:layout_weight="0.5"
+                                android:textColor="@color/white"
+                                android:textSize="20dp"
+                                android:id="@+id/button_keyboard"
+                                android:layout_marginTop="15dp"/>
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.6"
+            android:paddingTop="20dp">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.75">
+
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_weight="3"
+                            android:background="@drawable/row_layout"
+                            android:id="@+id/touchpad"
+                            android:orientation="horizontal">
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="20dp"
+                            android:layout_height="fill_parent"
+                            android:background="@drawable/scroll_panel"
+                            android:id="@+id/scrollbar"
+                            android:orientation="horizontal"
+                            android:layout_marginLeft="-2dp">
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.25">
+
+                    <Button
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dp"
+                        android:id="@+id/button_voice_command"
+                        android:text="VOICE COMMAND"
+                        android:onClick="voiceCommand"
+                        android:background="@drawable/panel_button"
+                        android:textColor="@color/white"
+                        android:textSize="15dp"
+                        android:layout_marginTop="10dp"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:paddingLeft="15dp"
+              android:paddingRight="15dp"
+              android:paddingTop="15dp"
+              android:paddingBottom="15dp"
+              android:background="@color/base_background"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/title_panel">
+
+        <TextView
+            android:text="Discovered Devices"
+            android:id="@+id/title_discovered_devices"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:paddingLeft="8dp"/>
+
+    </LinearLayout>
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/paired_devices_title"
+        android:id="@android:id/list"
+        android:background="#aaaaaa"
+        android:layout_marginTop="20dp"
+        android:dividerHeight="-2dp"
+        android:paddingLeft="-2dp"
+        android:paddingRight="-2dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/paired_devices_title"
+        android:id="@android:id/empty"
+        android:text="No devices found"
+        android:gravity="center_horizontal"
+        android:textStyle="bold" />
+
+</LinearLayout>

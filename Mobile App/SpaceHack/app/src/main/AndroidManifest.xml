@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.spacehack.android.client" >
+
+    <!-- Permission [START] ================================= -->
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <!-- Permission [END] =================================== -->
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!-- Services [START] =================================== -->
+
+        <service android:name="in.spacehack.android.bluetooth.BluetoothClient" />
+        <service android:name="in.spacehack.android.sensors.SensorsService" />
+
+        <!-- Services [END] ===================================== -->
+
+
+        <!-- Activities [START] ================================= -->
+
+        <activity
+            android:name=".Dashboard"
+            android:label="@string/app_name"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+
+                <action android:name="android.intent.action.VOICE_COMMAND" />
+                <action android:name="android.intent.action.WEB_SEARCH" />
+                <action android:name="android.intent.action.MEDIA_BUTTON" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+            </intent-filter>
+        </activity>
+
+        <!-- Bluetooth Related -->
+
+        <activity
+            android:name=".BluetoothPairedDevices"
+            android:label="@string/title_paired_devices"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+
+        <activity
+            android:name=".BluetoothDiscoveredDevices"
+            android:label="@string/title_discovered_devices"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+
+        <activity
+            android:name=".Connecting"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_connecting"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+
+        <activity
+            android:name=".Scanning"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_connecting"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" >
+        </activity>
+
+        <!-- Activities [END] =================================== -->
+
+
+
+    </application>
+
+</manifest>
